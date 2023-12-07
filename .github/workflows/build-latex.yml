@@ -28,6 +28,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: ${{ env.targets }}
+          continue_on_error: "true"
           work_in_root_file_dir: "true"
 
       - name: Move and rename pdfs
