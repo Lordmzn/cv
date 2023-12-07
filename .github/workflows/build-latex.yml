@@ -16,7 +16,9 @@ jobs:
 
       - name: Create environment variables
         run: |
-          echo "targets=$(find . -name main.tex)" >> $GITHUB_ENV
+          {
+            echo "targets=$(find . -name main.tex)"
+          } >> "$GITHUB_ENV"
           echo $targets
           echo "release_name=$(date +'%b %d, %Y')" >> $GITHUB_ENV
           echo "release_tag=$(date +'%Y/%m/%d/%H.%M.%S')" >> $GITHUB_ENV
