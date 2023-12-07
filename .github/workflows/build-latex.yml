@@ -17,5 +17,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: EmanueleMason-${{ github.event.pull_request.base.ref }}
-          path: cv.pdf
+          path: main.pdf
    
