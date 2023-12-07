@@ -1,21 +1,44 @@
-name: Build Latex
-run-name: Build latest ${{ github.event.pull_request.base.ref }}
+name: Build pdfs and make release.
+
 on:
-  pull_request_target:
-    types: [opened]
+  push:
+    tags:
+      - '*.*.*'
+
 jobs:
-  build_latex:
+
+  build_latex_and_release:
     runs-on: ubuntu-latest
     steps:
+      
       - name: Set up Git repository
         uses: actions/checkout@v3
+
+      - name: Create environment variables
+        run: |
+          echo "targets=$(find . -name main.tex)" >> $GITHUB_ENV
+          echo $targets
+          echo "release_name=$(date +'%b %d, %Y')" >> $GITHUB_ENV
+          echo "release_tag=$(date +'%Y/%m/%d/%H.%M.%S')" >> $GITHUB_ENV
+    
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: main.tex
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
+          root_file: ${{ env.targets }}
+          work_in_root_file_dir: "true"
+
+      - name: Move and rename pdfs
+        run: |
+          for t in ${{ env.targets }}
+          do
+            mv $(echo $t | sed 's/.tex/.pdf/g') "$(dirname $t).pdf"
+          done
+          echo "outputs=$(find . -maxdepth 1 -name *.pdf)" >> $GITHUB_ENV
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
         with:
-          name: EmanueleMason-${{ github.event.pull_request.base.ref }}
-          path: main.pdf
+          files: ${{ env.outputs }}
+          name: ${{ env.release_name }}
+          tag_name: ${{ env.release_tag }}
    
