@@ -1,6 +1,7 @@
 name: Build pdfs and make release.
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - '*.*.*'
