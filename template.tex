@@ -1,0 +1,167 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.1 (8/1/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,italian]{twentysecondcv} % a4paper for A4
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\profilepic{Sicilia_cv.jpeg} % Profile picture
+
+\cvname{Emanuele Mason} % Your name
+\cvjobtitle{}%\cvjobtitle{Adventurer} % Job title/career
+
+\cvdate{9 luglio 1988} % Date of birth
+\cvaddress{Milano (MI)} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{+39 346 8873597} % Phone number
+\cvsite{\url{http://www.lordmzn.it}} % Personal website
+\cvmail{emanuele.mason.it@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\aboutme{Sono una persona curiosa e appassionata dalle cose fatte per bene. Cerco di praticare il Kung Fu, un termine cinese che si riferisce a qualsiasi studio, apprendimento o pratica che richiede pazienza, energia e tempo per essere completato.} % To have no About Me section, just remove all the text and leave \aboutme{}
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+\def\otherskills{ {\large Lingue}\\
+Inglese \textbf{scritto C1, parlato B2}.
+
+{\large Competenze informatiche}\\
+Scientifiche: \textbf{Matlab, R, Jupyter\\
+\_ M3O: ottimizzazione multiobiettivo di serbatoi idrici (\href{http://github.com/mxgiuliani00/M3O-Multi-Objective-Optimal-Operations}{github.com/mxgiuliani00/\\M3O-Multi-Objective-Optimal-Operations})}\\
+Programmazione: \textbf{C++, Python, Java\\
+\_ PyDMMT: modellizzazione di sistemi dinamici (\href{http://github.com/Lordmzn/pydmmt}{github.com/Lordmzn/pydmmt})\\
+\_ MOGLE modello in C++ per la tesi magistrale  (\href{http://github.com/Lordmzn/mogle}{github.com/Lordmzn/mogle})}\\
+Web: \textbf{HTML di base, CSS e Javascript}\\
+\textbf{\_ Progetto di piccoli siti web: \href{http://www.cnai.info}{cnai.info}}\\
+Produttività: \textbf{\LaTeX, MS Office, iWorks}\\
+Sistemi operativi: \textbf{MacOS, Linux Ubuntu, Windows}
+
+{\large Soft skills}\\
+Gestione del conflitto, \textbf{sviluppata all'interno del Consiglio dei Garanti di una sezione provinciale di un partito politico}\\
+Gestione del cambiamento, \textbf{approfondita grazie ad un corso dedicato}\\
+Parlare in pubblico, \textbf{grazie alla partecipazione a conferenze}\\
+Scrittura scientifica, \textbf{per la comunicazione dei risultati della mia ricerca}\\
+Comunicazione interpersonale, \textbf{approfondita durante l'esperienza di assistenza a docenti universitari}
+}
+
+% Skill bar section, each skill must have a value between 0 an 6 (float)
+%\skills{{pursuer of rabbits/5.8},{good manners/4},{outgoing/4.3},{polite/4},{Java/0.01}}
+
+%------------------------------------------------
+
+% Skill text section, each skill must have a value between 0 an 6
+%\skillstext{{lovely/4},{narcissistic/3}}
+
+%----------------------------------------------------------------------------------------
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Educazione}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem{Nov 2014 -- Gen 2018}{Dottorato {\normalfont in ingegneria dell'Informazione}}{Politecnico di Milano}{\emph{Beyond full rationality: modelling tradeoff dynamics in multiobjective water management.} Nella mia ricerca, ho sviluppato e implementato nuovi algoritmi per migliorare i modelli numerici di gestione delle risorse naturali. Ho utilizzato la modellazione basata su agenti e l'apprendimento per rinforzo per simulare i processi decisionali in contesti multiobiettivo. Mi sono inoltre dedicato agli strumenti di visualizzazione a supporto dell'analisi e della comunicazione dei risultati.}
+	\twentyitem{Ott 2010 -- Apr 2013}{Laurea magistrale in ingegneria ambientale}{Politecnico di Milano}{Indirizzo pianificazione e gestione. Nel lavoro di tesi, ho utilizzato l'ottimizzazione multiobiettivo per creare un modello di evoluzione geomorfologica di Digital Elevation Model (DEM).\\
+    Votazione 110/110 \textit{magna cum laude}.}
+	\twentyitem{Ott -- Dic 2012}{Visiting scholar}{Pennsylvania State University}{Ho approfondito il tema degli algoritmi genetici multiobiettivo.}
+	\twentyitem{Ott 2007 -- Ott 2010}{Laurea triennale in ingegneria ambientale}{Politecnico di Milano}{Votazione 102/110.}
+	\twentyitem{Set 2002 -- Lug 2010}{Liceo scientifico}{A. Tosi, Busto Arsizio}{Votazione 92/100.}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Esperienze lavorative}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem{Feb -- Apr 2017}{Collaborazione}{Wetlands International \& CIRF}{Ho analizzato i benefici degli interventi di riqualificazione fluviale realizzati in Europa occidentale, e ho poi redatto un rapporto che evidenzia la loro efficacia nella riduzione del rischio di piena e al tempo stesso, nel miglioramento dello stato ecologico dei fiumi.}
+	\twentyitem{Set 2014 -- Ott 2017}{Assistente alla didattica}{Politecnico di Milano}{Sono stato esercitatore per i corsi triennali e magistrali di "Modellistica e simulazione" e di "Analisi dei sistemi".}
+	\twentyitem{Ott 2013 -- Set 2014}{Assegnista di ricerca}{Politecnico di Milano}{All'interno di un progetto di cooperazione internazionale tra Italia e Vietnam, ho progettato e implementato un software per la simulazione di modelli dinamici, poi applicato alla gestione integrata di quattro serbatoi idrici nel bacino Red-Thai Binh, in Vietnam.}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\section{Principali pubblicazioni}
+
+\begin{twentyshort} % Environment for a short list with no descriptions
+	\twentyitemshort{2016}{M. Giuliani, A. Castelletti, F. Pianosi, E. Mason, and P.M. Reed, Curses, Tradeoffs, and Scalable Management: Advancing Evolutionary Multiobjective Direct Policy Search to Improve Water Reservoir Operations. In \textit{Journal of Water Resources Planning and Management,} Volume 142 Issue 2 - February 2016}
+	\twentyitemshort{2016}{M. Giuliani, Y. Li, A. Cominola, S. Denaro, E. Mason, and A. Castelletti, A Matlab toolbox for designing Multi-Objective Optimal Operations of water reservoir systems. In \textit{Environmental Modelling \& Software,} 85: 293--298. 2016.}
+	\twentyitemshort{2016}{F. Amigoni, A. Castelletti, P. Gazzotti, M. Giuliani and E.Mason, Using Multiagent Negotiation to Model Water Resources Systems Operations. In \textit{International Conference on Autonomous Agents and Multiagent Systems,} pagg. 51-72. Springer 2016.}
+	%\twentyitemshort{<dates>}{<title/description>}
+\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{Premi}
+
+\begin{twentyshort} % Environment for a short list with no descriptions
+	\twentyitemshort{Apr 2016}{Miglior articolo secondo AAMAS Workshop Chairs di IDEAS 2016.}
+    \twentyitemshort{Lug 2012}{Premio "Tesi all'estero" del Politecnico di Milano.}
+	%\twentyitemshort{<dates>}{<title/description>}
+\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 INTERESTS
+%----------------------------------------------------------------------------------------
+
+\section{Interessi}
+
+Pratico arti marziali tradizionali cinese dal 2011, e ho raggiunto il grado di cintura nera in Shaolin e Tai Chi. Nel mio tempo libero, sono un fan della Formula 1, ma mi piacciono anche l'escursionismo e i concerti rock.
+
+
+%----------------------------------------------------------------------------------------
+%	 OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners.
+
+\vspace*{\fill}
+\begin{center}
+{\footnotesize \itshape Autorizzo al trattemento dei dati personali di cui sopra secondo il Decreto Legislativo 196/03.}
+\end{center}
+%----------------------------------------------------------------------------------------
+\end{document} 
