@@ -1,0 +1,48 @@
+name: Build pdfs and make release.
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - '*.*.*'
+
+jobs:
+
+  build_latex_and_release:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+
+      - name: Create environment variables
+        run: |
+          targets=$(find . -name main.tex)
+          echo "targets<<EOF" >> $GITHUB_ENV
+          echo $targets >> $GITHUB_ENV 
+          echo "EOF" >> $GITHUB_ENV
+          echo "release_name=$(date +'%b %d, %Y')" >> $GITHUB_ENV
+          echo "release_tag=$(date +'%Y/%m/%d/%H.%M.%S')" >> $GITHUB_ENV
+    
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: ${{ env.targets }}
+          continue_on_error: "true"
+          work_in_root_file_dir: "true"
+
+      - name: Move and rename pdfs
+        run: |
+          for t in ${{ env.targets }}
+          do
+            mv $(echo $t | sed 's/.tex/.pdf/g') "$(dirname $t).pdf"
+          done
+          echo "outputs=$(find . -maxdepth 1 -name *.pdf)" >> $GITHUB_ENV
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ env.outputs }}
+          name: ${{ env.release_name }}
+          tag_name: ${{ env.release_tag }}
+   

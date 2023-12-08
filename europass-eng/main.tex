@@ -1,0 +1,187 @@
+\documentclass[totpages,helvetica,openbib,english,flagCMYK]{europecv}
+
+\usepackage[a4paper,top=1.27cm,left=1cm,right=1cm,bottom=2cm]{geometry}
+\usepackage[english]{babel}
+\usepackage{graphicx} % Required to draw the logo
+\usepackage{natbib} % bibentry use this in TexLive2023
+\usepackage{bibentry} % to have entries of the bibliography in the cv
+\usepackage{url,nth}
+
+% Define personal data
+\ecvname{Mason Emanuele}
+%\ecvaddress{via F. Abbiati, 2, 20148, Milano}
+%\ecvtelephone[3468873597]{0331376632}
+%\ecvemail{\url{emanuele.mason.it@gmail.com}}
+\ecvnationality{Italian}
+\ecvdateofbirth{9 July 1988}
+\ecvbeforepicture{\raggedleft}
+\ecvpicture[height=5cm]{../images/enersem.JPG}
+\ecvafterpicture{\ecvspace{-3.5cm}}
+\ecvfootnote{For additional informations: \url{http://europass.cedefop.eu.int}\\
+\textcopyright European Community, 2003.}
+
+% fix to load hyperref in texlive2023
+\usepackage{hyperref}
+\makeatletter
+\def\HyPsd@expand@utfvii{}
+\makeatother
+
+\begin{document}
+\selectlanguage{english}
+\bibliographystyle{plain}
+\nobibliography{../publications}
+
+\begin{europecv}
+\ecvpersonalinfo[20pt]
+
+%\ecvitem{\large\textbf{Impiego ricercato/ Settore di
+%competenza}}{\large\textbf{Facoltativo}}
+		
+\ecvsection{Work experience}
+
+\ecvitem{\textbf{\nth{6} Mar 2018 - today}}{\large Consultant for ENERSEM}
+\ecvitem{Main tasks and responsibilities}{As a private consultant, I am helping a new startup in modelling energy systems ranging from small factories, to offices and buildings. I deal with big data analysis and machine learning to extract new insights and to distill advices for improving the use of energy, its efficiency and effectiveness. I also deal with control system design, in particular by using model predictive control strategies, to close the loop between field measurements and devices such as heating and cooling systems.}
+\ecvitem{}{Finally, I'm overviewing and working on funded research projects granted to ENERSEM: from 2018 to December 2019 I've worked at TEPORE on a Model Predictive Control algorithm for smart thermostats and on analysis of room occupancy data with Support Vector Machines and other unsupervised algorithms. From 2020, I'm working on LombHe@t, where we integrate the modelling of heat pumps into the control algorithm and we analyze consumption profiles of district heating users. }
+\ecvitem[10pt]{Name and address of employer}{ENERSEM s.r.l.}
+
+\ecvitem{\textbf{\nth{2} Feb 2018 - \nth{3} Apr 2018}}{\large Modelling and managing an alpine hydroelectric plant}
+\ecvitem{Main tasks and responsibilities}{As a private consultant, I developed and applied algorithms for modelling the historical operations of an hydroelectric reservoir (Cancano lake, North of Italy) in multiple periods, with particular focus on evolving hydroelectric markets. The research aimed at quantifying the adaptive response of system management, and at improving the assessment of system performance. To this end, we applied algorithms of Inverse Reinforcement Learning to a lumped, conceptual model of the hydroelectric plant.}
+\ecvitem[10pt]{Name and address of employer}{Prof. Andrea Castelletti, Politecnico di Milano}
+
+\ecvitem{\textbf{\nth{1} Feb 2017 - \nth{15} Apr 2017}}{\large Desk study River Restoration wiki}
+\ecvitem{Main tasks and responsibilities}{Analysis of benefits provided by implemented river restoration schemes across Europe through a review of existing databases, including the LIFE+ RESTORE wiki and the FP7 REFORM wiki, in order to provide evidence of river restoration works that address flood risk and ecological status. In collaboration with CIRF, Centro Italiano per la Riqualificazione Fluviale.}
+\ecvitem[10pt]{Name and address of employer}{Wetlands International - European Association}
+
+\ecvitem{\textbf{\nth{1} Mar 2015 - \nth{31} Jun 2017}}{\large Collaborator in teaching activities}
+\ecvitem{Main tasks and responsibilities}{
+Class of ``Modellistica e simulazione'' in Italian A.Y. 2015/2016 and 2016/2017: Excel exercises of discrete system simulation, discretization of continuous systems, linear and non linear programming using Excel solver. 20 hours of computer lab.}
+\ecvitem{}{Class of ``Modelling and Simulation'' A.Y. 2015/2016: non linear systems in continuous time, stability and canonical responses, control and observability of linear systems. 12 hours of class exercises.}
+\ecvitem{}{Class of ``Analisi dei Sistemi'' in Italian A.Y. 2014/2015: linear systems in continuous and discrete time, non linear systems, stability and canonical responses. 8 hours of class exercises and 4 hours of computer lab.}
+\ecvitem[10pt]{Name and address of employer}{
+Prof. Giorgio Guariso, Politecnico di Milano.
+
+Prof. Alessandra Gragnani, Politecnico di Milano.
+}
+		
+\ecvitem{\textbf{1 Oct 2013 - 30 Sep 2014}}{\large Research fellow at Politecnico di Milano.}
+\ecvitem{Main tasks and responsibilities}{Design and coding of a simulation software for dynamic models and application to the regulation of Red-Thai Binh hydroelectric basin in Vietnam.}
+\ecvitem[20pt]{Name and address of employer}{Prof. Rodolfo Soncini-Sessa, Politecnico di Milano.}
+
+\ecvsection{Education and training}
+		
+\ecvitem{\textbf{Oct 2014 - 17 Jan 2018}}{\large PhD in Information Technology, \emph{cum laude}}
+\ecvitem{Title}{Beyond full rationality: modelling tradeoff dynamics in multiobjective water management}
+\ecvitem{Principal subject}{We have been researching how to model the behavior of human operators in water systems with multiple targets. We expand the traditional normative approaches based on the assumption of a utility maximizer into a multi objective context, where multiple, equivalently optimal behaviors co-exist. We develop a non-parametric approach based on inverse reinforcement learning to identify the multiple utility functions of an operator, and a parametric agent based negotiation protocol to identify the operator’s tradeoff among multiple utilities and the tradeoff evolution in time. The methodologies are demonstrated on both synthetic case studies and real settings.}
+\ecvitem{Skills acquired}{Management of natural resources, especially water; control theory: control of hybrid systems; machine learning: supervised learning and reinforcement learning; multiagent systems; game theory; multi criteria decision aiding; epistemology of research in social sciences; experimental methods in engineering.}
+\ecvitem[15pt]{Supervisor and school}{Prof Andrea Castelletti and Matteo Giuliani, PhD, Department of Engineering, Information, Bioengineering, Politecnico di Milano}
+
+\ecvitem{\textbf{25 May 2014 - 1 Jun 2014}}{\large Spring school in \emph{Multi Criteria Decision Aiding}, Perugia 2014}
+\ecvitem{Principal subjects / occupational skills learned}{Aiding the \emph{multi criteria} decision: multi attribute value theory, ELECTRE and PROMETHEE methods, analytical hierarchical process.}
+\ecvitem[15pt]{Name and kind of school}{Università degli studi di Perugia}
+
+\ecvitem{\textbf{Oct 2010 - May 2013}}{\large Master of Science (M.Sc) in Environmental and Land Planning Engineering: Natural Resources Planning and Management}
+\ecvitem{Grade}{110/110 \emph{cum laude}}
+\ecvitem{Principal subjects / occupational skills learned}{Management of natural resources, numeric modeling of fluvial systems, multi-objective optimization, Environmental impact assessment, land planning.}
+\ecvitem[15pt]{Name and kind of school}{Politecnico di Milano}
+		
+\ecvitem{\textbf{Oct 2012 - Dec 2012}}{\large Visiting scholar at PennState}
+\ecvitem{Main tasks}{Visiting scholar at Hydroinformatics Research Group - Department of Civil and Environmental Engineering. Pennsylvania State University, USA.}
+\ecvitem[15pt]{Principal subjects / occupational skills learned}{Use of multi objective evolutionary algorithm for complex mathematical programming (MOEAframework and BorgMOEA).}
+		
+\ecvitem{\textbf{Oct 2007 - Sep 2010}}{\large Bachelor of Engineering (B. Eng) in Environmental and Land Planning Engineering}
+\ecvitem{Grade}{102/110}
+\ecvitem{Principal subjects}{Core engineering subjects: mathematics, physics, chemistry, informatics. Insights of economy, building science, geology, hydrology, environmental chemistry.}
+\ecvitem[15pt]{Name and kind of school}{Politecnico di Milano}
+
+\ecvitem{\textbf{Sep 2003 - Jul 2007}}{\large Italian high school ``liceo scientifico''}
+\ecvitem{Grade}{92/100}
+\ecvitem{Principal subjects}{General high level education on italian, latin and english literature; understanding of written latin; speaking and writing modern english; italian writing of short essays and newspaper articles; overview of main historical and philosophical topics; art history; basic knowledge of mathematics, physics, chemistry, biology, geology, astronomy, information technology, technical and artistic drawing.}
+\ecvitem[20pt]{Name and kind of school}{Liceo Scientifico A. Tosi, Busto Arsizio}
+
+
+\ecvsection{Publications}
+\ecvitem{\textbf{Journal}}{}
+\ecvitem[10pt]{[A5]}{\bibentry{Mason2018sec}}
+\ecvitem[10pt]{[A4]}{\bibentry{Bizzi2018more}} % M3O
+\ecvitem[10pt]{[A3]}{\bibentry{Giuliani2016matlab}} % M3O
+\ecvitem[10pt]{[A2]}{\bibentry{Amigoni2016IDEAS}}
+\ecvitem[10pt]{[A1]}{\bibentry{Giuliani2015emodps}}
+\ecvitem{\textbf{Conference proceedings}}{}
+\ecvitem[10pt]{[B11]}{\bibentry{Mason2017egu}}
+\ecvitem[10pt]{[B10]}{\bibentry{Giuliani2016iEMSs}}
+\ecvitem[10pt]{[B9]}{\bibentry{Amigoni2016AAMAS}}
+\ecvitem[10pt]{[B8]}{\bibentry{Mason2016ewri}}
+\ecvitem[10pt]{[B7]}{\bibentry{Mason2015agu}}
+\ecvitem[10pt]{[B6]}{\bibentry{Giuliani2015ewri}}
+\ecvitem[10pt]{[B5]}{\bibentry{Giuliani2014agu}}
+\ecvitem[10pt]{[B4]}{\bibentry{Giuliani2014ifac}}
+\ecvitem[10pt]{[B3]}{\bibentry{Giuliani2014egu}}
+\ecvitem[10pt]{[B2]}{\bibentry{Micotti2014egu}}
+\ecvitem[10pt]{[B1]}{\bibentry{Mason2013egu}}
+
+\ecvsection{Awards}
+\ecvitem{\textbf{Apr 2016}}{IDEAS 2016 Best Paper Award -- [B10]} 
+\ecvitem[20pt]{From}{IDEAS Organizing committee and AAMAS Workshop Chairs}
+
+\ecvitem{\textbf{Jul 2012}}{Winner of grant ``Tesi all'estero''}
+\ecvitem[20pt]{From}{Politecnico di Milano}
+
+\ecvsection{Personal skills}
+
+\ecvitem[10pt]{\large Languages}{Italian (mother tongue). Proficient English. Basic French.}
+\ecvmothertongue[15pt]{Italian}
+\ecvitem{\large Other languages}{}
+\ecvlanguageheader{(*)}
+\ecvlanguage{English}{\ecvCOne}{\ecvCOne}{\ecvBTwo}{\ecvBTwo}{\ecvCOne}
+\ecvlastlanguage{French}{\ecvBOne}{\ecvBOne}{\ecvAOne}{\ecvAOne}{\ecvAOne}
+\ecvlanguagefooter[10pt]{(*)}
+
+\ecvitem[10pt]{\large Communication skills}{
+Documentation and reports -- Manual of DMMT software, used now by Vietnamese water agency under the project IMRR. Final scientific report of the studies performed (Deliverable D7.1 of IMRR)}
+\ecvitem[10pt]{}{Reports of work -- MODUS workshop at Nizza University, Sophia Antipolis, with a presentation titled ``Concepts behind models'', showing the work developed during the course of ``Modellistica e Governo del Territorio'' (Modelling and land management), Jan 2012.}
+\ecvitem[10pt]{}{Writing of scientific papers -- See section \emph{Publications} for the articles.}
+
+\ecvitem{\large Organizational / managerial skills}{Conflict resolution -- Member of ``Consiglio dei Garanti'' of Partito Democratico of Varese province, the internal judicial board, Oct 2013 - Dec 2016.}
+\ecvitem[10pt]{}{Prioritization, decision making and team management -- Part of the secretariat of local branch of Giovani Democratici - the youth branch of the Partito Democratico, Jun 2013 - Jan 2015.}
+	 	
+\ecvitem[10pt]{\large Computer skills}{}
+\ecvitem{Scientific}{Matlab, R, Jupyter notebooks}
+\ecvitem{Scripting and programming}{C++, Java, Python, Bash, Git}
+\ecvitem{}{PyDMMT library: https://github.com/Lordmzn/pydmmt}
+\ecvitem{}{MOGLE model: https://github.com/Lordmzn/mogle}
+\ecvitem{Web}{basic knowledge of html, CSS, Javascript}
+\ecvitem{}{Design of small websites: www.cnai.info, www.lordmzn.it}
+\ecvitem{Personal productivity tools}{Latex, iWorks, MS Office, Adobe Photoshop, Adobe Illustrator} 
+\ecvitem{Operating systems}{OSX; Linux Ubuntu; Windows.}
+\ecvitem[10pt]{Other softwares}{CMS software: Joomla!, Wordpress; GIS systems: ArcGIS}
+		
+\ecvitem[10pt]{\large Driving license}{B level driving license.}
+		
+\ecvitem[10pt]{\large Personal interests}{I've been practicing traditional chinese martial arts since 2010. I'm now black belt in Shaolin (Meihuaquan) and Tai Chi Yang style. I'm also a Formula 1 fanatic. In my free time, I love mountain hiking and going to rock concerts.}
+
+		%\ecvsection{Annexes}
+		%\ecvitem{}{1. Brief report on the activities performed abroad
+		%for my thesis project; Politecnico di Milano scholarship
+		%a.a. 2011/12 for thesis abroad. }
+\end{europecv}
+\vspace{15pt}
+\flushright
+Milan, \today, \\
+\vspace{10pt}
+\underline{\hspace{250pt}}
+	
+\null\vspace*{\stretch{1}}
+\flushright
+\begin{tabular}{rp{250pt}}
+ & \small Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base all’art. 13 del D. Lgs. 196/2003 (disponibile presso
+ \url{http://www.garanteprivacy.it/garante/doc.jsp?ID=1311248}) e all’art. 13 GDPR 679/16.
+ \\
+ \\
+& \small Autorizzo la pubblicazione sul sito istituzione del Politecnico di Milano (sez. Amministrazione Trasparente)  in ottemperanza al D. Lgs n. 33 del 14 marzo 2013 (e s.m.i.).
+ \\
+ &  \\ 
+ & Firma:\\ 
+ & \underline{\hspace{250pt}} \\
+\end{tabular} 
+
+\end{document}
