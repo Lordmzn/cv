@@ -33,20 +33,16 @@ jobs:
 
       - name: Move and rename pdfs
         run: |
+          mkdir build
           for t in ${{ env.targets }}
           do
-            mv $(echo $t | sed 's/.tex/.pdf/g') "$(dirname $t).pdf"
+            mv $(echo $t | sed 's/.tex/.pdf/g') "build/$(dirname $t).pdf"
           done
-          outputs=$(find . -maxdepth 1 -name "*.pdf")
-          echo "outputs<<EOF" >> $GITHUB_ENV
-          echo $outputs >> $GITHUB_ENV 
-          echo "EOF" >> $GITHUB_ENV
 
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          files: |
-            ${{ env.outputs }}
+          files: build/*.pdf
           name: ${{ env.release_name }}
           tag_name: ${{ env.release_tag }}
    
