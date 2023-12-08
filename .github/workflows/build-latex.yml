@@ -45,7 +45,8 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          files: ${{ env.outputs }}
+          files: |
+            ${{ env.outputs }}
           name: ${{ env.release_name }}
           tag_name: ${{ env.release_tag }}
    
