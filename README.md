@@ -2,7 +2,6 @@
 
 ## Structure
 
-Main branches: `one-page-ita`, `europass-ita`, `europass-eng`.
-
-Any pull requests will trigger a github action that compile the PDF 
-and upload a zip with the same name of the PR target branch.
+A document per folder. A github action triggered on tags will look
+for `main.tex` and compile them. Then will create a release with
+the resulting pdf attached (renamed as the containing folder).
