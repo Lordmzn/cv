@@ -37,7 +37,7 @@ jobs:
           do
             mv $(echo $t | sed 's/.tex/.pdf/g') "$(dirname $t).pdf"
           done
-          outputs=$(find . -maxdepth 1 -name *.pdf)
+          outputs=$(find . -maxdepth 1 -name "*.pdf")
           echo "outputs<<EOF" >> $GITHUB_ENV
           echo $outputs >> $GITHUB_ENV 
           echo "EOF" >> $GITHUB_ENV
