@@ -1,24 +1,11 @@
-%\RequirePackage{scrlfile}
-
-%\PreventPackageFromLoading{ucs,inputenc}
-
 \documentclass[totpages,helvetica,openbib,english,flagCMYK]{europecv}
 
-%\makeatletter
-%\renewcommand\ecv@https://www.overleaf.com/5588307fvxtvd#utf[1]{{\inputencoding{utf8}#1}}
-%\makeatother
-
-%\ResetPreventPackageFromLoading
-%\usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}
 \usepackage[a4paper,top=1.27cm,left=1cm,right=1cm,bottom=2cm]{geometry}
 \usepackage[english]{babel}
 \usepackage{graphicx} % Required to draw the logo
+\usepackage{natbib} % bibentry use this in TexLive2023
 \usepackage{bibentry} % to have entries of the bibliography in the cv
 \usepackage{url,nth}
-
-% \renewcommand{\ttdefault}{phv} % Uses Helvetica instead of fixed
-% width font
 
 % Define personal data
 \ecvname{Mason Emanuele}
@@ -28,14 +15,22 @@
 \ecvnationality{Italian}
 \ecvdateofbirth{9 July 1988}
 \ecvbeforepicture{\raggedleft}
-\ecvpicture[height=3cm]{laurea.jpg}
+\ecvpicture[height=5cm]{../images/enersem.JPG}
 \ecvafterpicture{\ecvspace{-3.5cm}}
 \ecvfootnote{For additional informations: \url{http://europass.cedefop.eu.int}\\
-\textcopyright European Communities, 2003.}
+\textcopyright European Community, 2003.}
 
+% fix to load hyperref in texlive2023
+\usepackage{hyperref}
+\makeatletter
+\def\HyPsd@expand@utfvii{}
+\makeatother
 
 \begin{document}
 \selectlanguage{english}
+\bibliographystyle{plain}
+\nobibliography{../publications}
+
 \begin{europecv}
 \ecvpersonalinfo[20pt]
 
@@ -105,8 +100,6 @@ Prof. Alessandra Gragnani, Politecnico di Milano.
 
 
 \ecvsection{Publications}
-\bibliographystyle{plain}
-\nobibliography{../publications}
 \ecvitem{\textbf{Journal}}{}
 \ecvitem[10pt]{[A5]}{\bibentry{Mason2018sec}}
 \ecvitem[10pt]{[A4]}{\bibentry{Bizzi2018more}} % M3O

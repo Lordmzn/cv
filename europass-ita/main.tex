@@ -1,41 +1,37 @@
-%\RequirePackage{scrlfile}
-
-%\PreventPackageFromLoading{ucs,inputenc}
-
 \documentclass[totpages,helvetica,openbib,italian,flagCMYK]{europecv}
 
-%\makeatletter
-%\renewcommand\ecv@https://www.overleaf.com/5588307fvxtvd#utf[1]{{\inputencoding{utf8}#1}}
-%\makeatother
-
-%\ResetPreventPackageFromLoading
-%\usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}
 \usepackage[a4paper,top=1.27cm,left=1cm,right=1cm,bottom=2cm]{geometry}
 \usepackage[italian]{babel}
 \usepackage{graphicx} % Required to draw the logo
+\usepackage{natbib} % bibentry use this in TexLive2023
 \usepackage{bibentry} % to have entries of the bibliography in the cv
 \usepackage{url}
-
-% \renewcommand{\ttdefault}{phv} % Uses Helvetica instead of fixed
-% width font
 
 % Define personal data
 \ecvname{Mason Emanuele}
 %\ecvaddress{via F. Abbiati, 2, 20148, Milano}
 %\ecvtelephone[3468873597]{0331376632}
 %\ecvemail{\url{emanuele.mason.it@gmail.com}}
-\ecvnationality{Italiana}
+\ecvnationality{italiana}
 \ecvdateofbirth{9 Luglio 1988}
 \ecvbeforepicture{\raggedleft}
-\ecvpicture[height=5cm]{enersem.JPG}
+\ecvpicture[height=5cm]{../images/enersem.JPG}
 \ecvafterpicture{\ecvspace{-3.5cm}}
 \ecvfootnote{Per informazioni aggiuntive: \url{http://europass.cedefop.eu.int}\\
 \textcopyright Comunità Europea, 2003.}
 
+% fix to load hyperref in texlive2023
+\usepackage{hyperref}
+\makeatletter
+\def\HyPsd@expand@utfvii{}
+\makeatother
 
 \begin{document}
 \selectlanguage{italian}
+\bibliographystyle{plain}
+\nobibliography{../publications}
+
+
 \begin{europecv}
 \ecvpersonalinfo[20pt]
 
@@ -111,13 +107,10 @@ Prof. Alessandra Gragnani, Politecnico di Milano.
 \ecvitem{Temi principali / competenze acquisite}{Letteratura italiana, latina e inglese, comprensione e traduzione di latino scritto, comprensione e conversazione in inglese, scrittura di saggi brevi e articoli di giornale; argomenti principali di storia, filosofia e storia dell'arte; conoscenza di base di matematica, fisica, chimica, biologia, geologia, astronomia, disegno tecnico e artistico.}
 \ecvitem[20pt]{Nome e tipo d'istituzione}{Liceo Scientifico A. Tosi, Busto Arsizio}
 
-
 \ecvsection{Votazione}
-\bibliographystyle{plain}
-\nobibliography{../publications}
 \ecvitem{\textbf{Articoli a rivista}}{}
 \ecvitem[10pt]{[A5]}{\bibentry{Mason2018sec}}
-\ecvitem[10pt]{[A4]}{\bibentry{Bizzi2018more}} % M3O
+\ecvitem[10pt]{[A4]}{\bibentry{Bizzi2018more}}
 \ecvitem[10pt]{[A3]}{\bibentry{Giuliani2016matlab}} % M3O
 \ecvitem[10pt]{[A2]}{\bibentry{Amigoni2016IDEAS}}
 \ecvitem[10pt]{[A1]}{\bibentry{Giuliani2015emodps}}
